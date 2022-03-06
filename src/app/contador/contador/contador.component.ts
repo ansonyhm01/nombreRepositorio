@@ -15,6 +15,7 @@ export class ContadorComponent {
   numero: number = 10;
   nro: number = 0;
   base: number = 5;
+  //comentario
   acumular(nro: number) {
     // this.nro += 1;
     this.numero += nro * this.base;
