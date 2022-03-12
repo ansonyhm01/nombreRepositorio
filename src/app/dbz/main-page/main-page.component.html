@@ -1,0 +1,30 @@
+<h1>main page componet</h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <app-personajes [listaPersonajes]="lista"></app-personajes>
+  </div>
+  <div class="col">
+    <h3>
+      Agregar <small>{{ nuevo.nombre }}</small>
+    </h3>
+    <hr />
+    <form (ngSubmit)="agregar()">
+      <input
+        [(ngModel)]="nuevo.nombre"
+        type="text"
+        name="nombre"
+        placeholder="Nombre  "
+      />
+      <input
+        [(ngModel)]="nuevo.poder"
+        type="number"
+        name="nombre2"
+        placeholder="Poder"
+      />
+      <!-- <input type="date" /> -->
+      <button type="submit">Agregar</button>
+    </form>
+  </div>
+</div>
