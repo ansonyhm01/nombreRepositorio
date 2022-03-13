@@ -6,8 +6,9 @@ import { FormsModule } from '@angular/forms';
 //nuestras inportaciones que creamos
 import { MainPageComponent } from './main-page/main-page.component';
 import { PersonajesComponent } from './personajes/personajes.component';
+import { AgregarComponent } from './agregar/agregar.component';
 @NgModule({
-  declarations: [MainPageComponent, PersonajesComponent],
+  declarations: [MainPageComponent, PersonajesComponent, AgregarComponent],
   imports: [CommonModule, FormsModule],
   exports: [MainPageComponent],
 })

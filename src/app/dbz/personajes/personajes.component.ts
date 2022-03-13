@@ -7,7 +7,7 @@ import { Personaje } from '../interfaces/dbz.interface';
   styleUrls: ['./personajes.component.css'],
 })
 export class PersonajesComponent implements OnInit {
-  @Input() listaPersonajes: Personaje[] = [];
+  @Input('data') listaPersonajes: Personaje[] = [];
   constructor() {}
 
   ngOnInit(): void {}

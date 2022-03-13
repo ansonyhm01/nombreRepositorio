@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import { ListadoComponent } from '../../heroes/listado/listado.component';
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
@@ -11,21 +12,15 @@ export class MainPageComponent implements OnInit {
     { nombre: 'Vegeta', poder: 750 },
   ];
   nuevo: Personaje = {
-    nombre: '',
-    poder: 0,
+    nombre: 'inicial',
+    poder: 500,
   };
   constructor() {}
   ngOnInit(): void {}
-  agregar() {
-    if (this.nuevo.nombre.trim().length === 0) {
-      return;
-    }
-    console.log(this.nuevo);
-
-    this.lista.push(this.nuevo);
-    this.nuevo = {
-      nombre: '',
-      poder: 0,
-    };
+  agregarPersonaje(argumento:Personaje){
+    console.log('reciviendo',argumento);
+    this.lista.push(argumento)
+    
   }
+  
 }
