@@ -21,7 +21,7 @@ export class AgregarComponent implements OnInit {
     if (this.nuevo.nombre.trim().length === 0) {
       return;
     }
-    console.log('emietiendo desdes el hijoss',this.nuevo);
+    console.log('cambios hijo',this.nuevo);
 
     this.onNuevoPersonaje.emit(this.nuevo)
     
