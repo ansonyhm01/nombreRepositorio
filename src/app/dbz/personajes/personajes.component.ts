@@ -8,8 +8,13 @@ import { DbzService } from '../services/dbz.service';
   styleUrls: ['./personajes.component.css'],
 })
 export class PersonajesComponent implements OnInit {
-  @Input('data') listaPersonajes: Personaje[] = [];
+  //@Input('data') listaPersonajes: Personaje[] = [];
+  get listaPersonajes(){
+    return this.dbzService.personajes
+  }
   constructor(private dbzService:DbzService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 }

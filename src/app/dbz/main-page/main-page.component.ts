@@ -13,17 +13,9 @@ export class MainPageComponent implements OnInit {
     nombre: 'inicial',
     poder: 500,
   };
-  get lista():Personaje[]{
-      return this.dbzService.lista
-  }
-  constructor(private dbzService:DbzService) {
-   // this.lista=this.dbzService.lista
+  constructor() {
+  
   }
   ngOnInit(): void {}
-  agregarPersonaje(argumento:Personaje){
-    //debugger;
-    this.lista.push(argumento)
-    
-  }
-  
+
 }
